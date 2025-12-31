@@ -1,0 +1,31 @@
+{
+  "name": "pdfbuilderapi",
+  "version": "1.0.0",
+  "description": "API REST diseñada para generar PDFs de manera ágil y flexible. Convierte imágenes, documentos y datos JSON en PDFs personalizados, optimizando flujos de trabajo automatizados.",
+  "main": "src/index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RitoTorri/PDFBuilderAPI.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/RitoTorri/PDFBuilderAPI/issues"
+  },
+  "homepage": "https://github.com/RitoTorri/PDFBuilderAPI#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^5.2.1",
+    "express-rate-limit": "^8.2.1",
+    "nodemon": "^3.1.11",
+    "puppeteer": "^24.34.0"
+  }
+}
