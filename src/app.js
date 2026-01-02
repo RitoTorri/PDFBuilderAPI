@@ -2,14 +2,10 @@
 import express from 'express';
 import cors from 'cors';
 import rateLimit from 'express-rate-limit';
-import dotenv from 'dotenv';
 import morgan from 'morgan';
 
 // Importación de rutas
 import builderRoute from './routes/builder.route.js';
-
-// CArgamos variables de entorno
-dotenv.config();
 
 // Clase App
 class App {
@@ -21,7 +17,7 @@ class App {
     // Inicializacion de atributos
     constructor() {
         this.app = new express();
-        this.port = process.env.API_PORT || 3000;
+        this.port = process.env.PORT || 3000;
         this.urlBase = `/api/pdf/builder`;
         this.middlewares();
         this.urls = {
