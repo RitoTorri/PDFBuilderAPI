@@ -1,4 +1,4 @@
-FROM node:24-alpine
+FROM node:24.12.0-alpine3.23
 
 # Entorno de la chamba
 WORKDIR /home/app
@@ -7,7 +7,7 @@ WORKDIR /home/app
 COPY package*.json .
 
 # Instala las dependencias
-RUN npm install
+RUN npm ci --only=production
 
 # Copia el archivo . a /home/app
 COPY . /home/app/
