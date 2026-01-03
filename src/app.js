@@ -2,7 +2,11 @@
 import express from 'express';
 import cors from 'cors';
 import rateLimit from 'express-rate-limit';
-// import morgan from 'morgan';
+import morgan from 'morgan';
+import dotenv from 'dotenv';
+
+// Configuración de variables de entorno
+dotenv.config();
 
 // Importación de rutas
 import builderRoute from './routes/builder.route.js';
@@ -34,7 +38,11 @@ class App {
             max: 100, // Limit each IP to 100 requests per `window` (here, per 15 minutes)
             message: 'Too many requests from this IP, please try again in 15 minutes'
         }));
-        //this.app.use(morgan('dev'));
+
+        if(process.env.NODE_ENV === 'development') {
+            this.app.use(morgan('dev'));
+            console.log('Morgan enabled for environment development');
+        }
     }
 
     routes = () => {

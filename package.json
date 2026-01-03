@@ -7,7 +7,8 @@
     "doc": "docs"
   },
   "scripts": {
-    "dev": "nodemon src/index.js",
+    "dev:windows": "cross-env NODE_ENV=development nodemon src/index.js",
+    "dev": "cross-env NODE_ENV=development nodemon src/index.js",
     "start": "node src/index.js"
   },
   "repository": {
@@ -24,12 +25,14 @@
   "homepage": "https://github.com/RitoTorri/PDFBuilderAPI#readme",
   "dependencies": {
     "cors": "^2.8.5",
+    "docx-pdf": "^0.0.1",
     "dotenv": "^17.2.3",
     "express": "^5.2.1",
     "express-rate-limit": "^8.2.1",
     "pdf-lib": "^1.17.1"
   },
   "devDependencies": {
+    "cross-env": "^10.1.0",
     "morgan": "^1.10.1",
     "nodemon": "^3.1.11"
   }

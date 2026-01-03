@@ -7,15 +7,15 @@ export async function imageToPdf(imagesPath, outputPathPdf) {
         const pdfDoc = await PDFDocument.create();
 
         // Leemos el array de imagenes
-        for(const imagePath of imagesPath) {
+        for (const imagePath of imagesPath) {
             // Extraemos la extensión de la imagen
             const exstension = imagePath.split(".").pop().toLowerCase();
             let imageNew;
 
             // Verfifcamos la extension de la imagen
-            if(['jpg', 'jpeg'].includes(exstension)) {
+            if (['jpg', 'jpeg'].includes(exstension)) {
                 imageNew = await pdfDoc.embedJpg(readFileSync(imagePath));
-            } else if(imagePath === 'png') {
+            } else if (imagePath === 'png') {
                 imageNew = await pdfDoc.embedPng(readFileSync(imagePath));
             }
 

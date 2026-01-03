@@ -5,7 +5,7 @@ class BuilderController {
     constructor(){}
 
     // Función para convertir una imagen en PDF
-    imageToPdf = async (req, res) => {
+    ImageToPdf = async (req, res) => {
         try {
             /*
                 - imagesPath: Array de rutas de las imágenes a convertir
@@ -22,8 +22,10 @@ class BuilderController {
             responses.responseSuccess(res, 'Image converted to PDF in path: ' + outputPathPdf);
 
         } catch (error) {
-            console.log(error.message);
-            responses.responseError(res, error.message);
+            if(error.message.includes('ENOENT')) {
+                return responses.responseNotFound(res, error.message);
+            }
+            responses.responseErrorInternal(res, error.message);
         }
     }
 }
