@@ -1,6 +1,6 @@
 import responses from '../utils/response.utils.js';
 
-const ImageToPdfValidator = (req, res, next) => {
+export default function ImageToPdfValidator(req, res, next) {
     const { imagesPath, outputPathPdf } = req.body;
     let message = '';
 
@@ -21,5 +21,3 @@ const ImageToPdfValidator = (req, res, next) => {
     if (message !== '') return responses.responseError(res, message);
     next();
 }
-
-export default { ImageToPdfValidator };
