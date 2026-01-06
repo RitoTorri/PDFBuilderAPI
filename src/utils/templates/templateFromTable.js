@@ -1,4 +1,4 @@
-export default function template1(pdfBuilder = {}) {
+export function templateFromTable(pdfBuilder = {}) {
     const columnOrder = Object.keys(pdfBuilder.table_headings || {});
     const dataRows = pdfBuilder.data || [];
 

@@ -25,4 +25,12 @@ const responseNotFound = (res, message = 'Error') => {
     });
 }
 
-export default { responseSuccess, responseError, responseErrorInternal, responseNotFound };
+const responsePdf = (res, pdfBuffer) => {
+    res.setHeader('Content-Type', 'application/pdf');
+    res.setHeader('Content-Disposition', 'attachment; filename="reporte.pdf"');
+    res.send(pdfBuffer);
+
+    return responseSuccess(res, "Reporte generado exitosamente");
+}
+
+export default { responseSuccess, responseError, responseErrorInternal, responseNotFound, responsePdf };

@@ -1,7 +1,7 @@
 // src/utils/pdfGenerator.js
 import puppeteer from 'puppeteer';
 
-export default async function generatoPDF(htmlContenido) {
+export async function generatorPDF(htmlContenido) {
     const browser = await puppeteer.launch();
     const page = await browser.newPage();
 
