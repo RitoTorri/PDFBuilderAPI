@@ -1,11 +1,12 @@
+import {templateFromTable} from '../utils/templates/templateFromTable.js'
+import {generatorPDF} from '../utils/htmlToPdf.js'
+
 class JsonToPdfService {
-    constructor(utils = {}) {
-        this.utils = utils;
-    }
+    constructor() {}
 
     convertJsonToPdf = async (jsonData) => {
-        const HTMLcontenido = this.utils.templateFromTable(jsonData);
-        return await this.utils.generatorPDF(HTMLcontenido);
+        const HTMLcontenido = templateFromTable(jsonData);
+        return await generatorPDF(HTMLcontenido);
     }
 }
 

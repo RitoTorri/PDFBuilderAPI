@@ -1,14 +1,15 @@
 import responses from '../utils/response.utils.js';
+import JsonToPdfServices from '../services/jsonToPdf.service.js'
+
+const pdfService = new JsonToPdfServices();
 
 class JsonToPdfController {
-    constructor(pdfService) {
-        this.pdfService = pdfService;
-    }
+    constructor() {}
 
     JsonToPdf = async (req, res) => {
         try {
             const { pdfBuilder } = req.body;
-            const pdfBuffer = await this.pdfService.convertJsonToPdf(pdfBuilder);
+            const pdfBuffer = await pdfService.convertJsonToPdf(pdfBuilder);
             responses.responsePdf(res, pdfBuffer);
 
         } catch (error) {

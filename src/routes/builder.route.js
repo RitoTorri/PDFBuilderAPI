@@ -1,8 +1,10 @@
-import { jsonToPdfController } from '../containers/jsonToPdf.container.js';
-import { imageToPdfController } from '../containers/imgToPdf.container.js';
-
+import JsonToPdfController from '../controllers/jsonToPdf.controller.js';
+import ImageToPdfController from '../controllers/imageToPdf.controller.js';
 import { Router } from 'express';
+
 const router = Router();
+const jsonToPdfController = new JsonToPdfController();
+const imageToPdfController = new ImageToPdfController();
 
 // Importar validadores
 import validatorsToImage from '../validators/imageToPdf.validators.js';

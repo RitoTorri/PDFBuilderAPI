@@ -1,11 +1,11 @@
+import { imageToPdf } from '../utils/imageToPdf.utils.js'
+
 class ImageToPdfService {
-    constructor(imageToPdf) { 
-        this.imageToPdf = imageToPdf;
-    }
+    constructor() { }
 
     async convertImageToPdf(imagesPath, outputPathPdf) {
         try {
-            return await this.imageToPdf(imagesPath, outputPathPdf);
+            return await imageToPdf(imagesPath, outputPathPdf);
         } catch (error) { throw error; }
     }
 }

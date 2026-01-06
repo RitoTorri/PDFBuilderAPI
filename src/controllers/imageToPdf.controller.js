@@ -1,14 +1,15 @@
 import responses from '../utils/response.utils.js';
+import ImageToPdfService from '../services/imageToPdf.service.js';
+
+const imageToPdfService = new ImageToPdfService();
 
 class ImageToPdfController {
-    constructor(ImageToPdfService) {
-        this.ImageToPdfService = ImageToPdfService;
-    }
+    constructor() { }
 
     ImageToPdf = async (req, res) => {
         try {
             const { imagesPath, outputPathPdf } = req.body;
-            await this.ImageToPdfService.convertImageToPdf(imagesPath, outputPathPdf);
+            await imageToPdfService.convertImageToPdf(imagesPath, outputPathPdf);
             responses.responseSuccess(res, 'Image converted to PDF in path: ' + outputPathPdf);
 
         } catch (error) {
