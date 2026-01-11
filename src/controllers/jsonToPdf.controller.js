@@ -4,7 +4,7 @@ import JsonToPdfServices from '../services/jsonToPdf.service.js'
 const pdfService = new JsonToPdfServices();
 
 class JsonToPdfController {
-    constructor() {}
+    constructor() { }
 
     JsonToPdf = async (req, res) => {
         try {
@@ -13,8 +13,8 @@ class JsonToPdfController {
             responses.responsePdf(res, pdfBuffer);
 
         } catch (error) {
-            console.error('Error al generar el reporte:', error);
-            responses.responseError(res, "Error al generar el reporte");
+            console.error('Error al generar el reporte:', error.message);
+            responses.responseError(res, "Error to generate the report: " + error.message);
         }
     }
 }

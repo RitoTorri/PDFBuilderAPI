@@ -35,6 +35,9 @@
 ## 📖 Documentación
 La documentación completa de la API está disponible en el siguiente enlace: [Manual de la API](https://github.com/RitoTorri/PDFBuilderAPI/blob/main/docs/Manual.md)
 
+Puedes encontrar el workspace de POSTMAN para probar los enpoint de la API en el siguiente enlace: [POSTMAN Workspace](https://ritotorri-5321757.postman.co/workspace/Cortez-Jes%C3%BAs-'s-Workspace~f2d04eac-b157-4c2b-8546-4c816e6a14a8/collection/48845560-e4484322-d8d7-48ce-b7ed-bc430007764d?action=share&creator=48845560&active-environment=48845560-3eb25b89-fab4-499d-8321-ee69fd59539c)
+
+
 ## ⚙️ Configuración de entorno
 En la carpeta raíz de la API, hay un archivo `.env.example` que contiene las variables de entorno necesarias para ejecutar la API. Simplemente renombra el archivo a `.env` y rellena los valores correspondientes.
 

@@ -25,9 +25,9 @@ const responseNotFound = (res, message = 'Error') => {
     });
 }
 
-const responsePdf = (res, pdfBuffer) => {
+const responsePdf = (res, pdfBuffer, name_pdf) => {
     res.setHeader('Content-Type', 'application/pdf');
-    res.setHeader('Content-Disposition', 'attachment; filename="reporte.pdf"');
+    res.setHeader('Content-Disposition', 'attachment; filename="Reporte.pdf"');
     res.send(pdfBuffer);
 }
 

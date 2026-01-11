@@ -1,4 +1,4 @@
-import { imageToPdf } from '../utils/imageToPdf.utils.js'
+import { imageToPdf } from '../utils/pdf-generators/imageToPdf.js'
 
 class ImageToPdfService {
     constructor() { }
