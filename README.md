@@ -37,11 +37,10 @@ La documentación completa de la API está disponible en el siguiente enlace: [M
 
 Puedes encontrar el workspace de POSTMAN para probar los enpoint de la API en el siguiente enlace: [POSTMAN Workspace](https://ritotorri-5321757.postman.co/workspace/Cortez-Jes%C3%BAs-'s-Workspace~f2d04eac-b157-4c2b-8546-4c816e6a14a8/collection/48845560-e4484322-d8d7-48ce-b7ed-bc430007764d?action=share&creator=48845560&active-environment=48845560-3eb25b89-fab4-499d-8321-ee69fd59539c)
 
-
 ## ⚙️ Configuración de entorno
 En la carpeta raíz de la API, hay un archivo `.env.example` que contiene las variables de entorno necesarias para ejecutar la API. Simplemente renombra el archivo a `.env` y rellena los valores correspondientes.
 
-- **API_PORT**: Puerto donde se ejecutará la API. Por defecto es `3000`.
+- **PORT**: Puerto donde se ejecutará la API. Por defecto es `3000`.
 
 ## 📦 Instalación
 Ejecuta los siguientes comandos en la terminal para instalar el proyecto:
@@ -68,3 +67,12 @@ npm run dev
 # Ejecutar el servidor de producción
 npm start
 ```
+
+## 🐛 Issues 
+
+Si encuentras algún **error 🐛**, **comportamiento inesperado 🔍** o tienes una **sugerencia de mejora 💡**, por favor crea un **issue 📋** en nuestro repositorio.
+
+**Recuerda que:**
+- Cada issue nos ayuda a mejorar la API 🚀
+- Tu feedback es invaluable para el desarrollo 💝
+- Juntos hacemos una mejor herramienta para todos 🤝
