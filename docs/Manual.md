@@ -282,7 +282,7 @@ Agrega filas especiales al final de la tabla para mostrar cálculos estadístico
 
 **Método HTTP:** `POST`  
 **Content-Type:** `application/json`  
-**Descripción:** Convierte datos estructurados en JSON a un documento PDF con gráfico de barras
+**Descripción:** Convierte datos estructurados en JSON a un documento PDF con gráfico de barras y torta.
 
 ### Notas Importantes 🎯
 
